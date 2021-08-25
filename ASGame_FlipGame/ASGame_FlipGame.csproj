@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>ASGame_FlipGame.App</StartupObject>
+    <ApplicationIcon>Resources\ICO.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\B.png" />
+    <None Remove="Resources\F.png" />
+    <None Remove="Resources\ICO.ico" />
+    <None Remove="Resources\ImagesBack\AvaToken\A1.png" />
+    <None Remove="Resources\ImagesBack\Background_ASTheme.jpg" />
+    <None Remove="Resources\ImagesBack\Background_AvaTheme.jpg" />
+    <None Remove="Resources\ImagesBack\Background_BellaTheme.jpg" />
+    <None Remove="Resources\ImagesBack\Background_CarolTheme.jpg" />
+    <None Remove="Resources\ImagesBack\Background_DianaTheme.jpg" />
+    <None Remove="Resources\ImagesBack\Background_EileenTheme.jpg" />
+    <None Remove="Resources\ImagesBack\BellaToken\B1.png" />
+    <None Remove="Resources\ImagesBack\CarolToken\C1.png" />
+    <None Remove="Resources\ImagesBack\DianaToken\D1.png" />
+    <None Remove="Resources\ImagesBack\EileenToken\E1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\ImagesBack\B.png" />
+    <Resource Include="Resources\ImagesBack\F.png" />
+    <Resource Include="Resources\ICO.ico" />
+    <Resource Include="Resources\Images\AvaToken\A1.png" />
+    <Resource Include="Resources\Images\Background_ASTheme.jpg" />
+    <Resource Include="Resources\Images\Background_AvaTheme.jpg" />
+    <Resource Include="Resources\Images\Background_BellaTheme.jpg" />
+    <Resource Include="Resources\Images\Background_CarolTheme.jpg" />
+    <Resource Include="Resources\Images\Background_DianaTheme.jpg" />
+    <Resource Include="Resources\Images\Background_EileenTheme.jpg" />
+    <Resource Include="Resources\Images\BellaToken\B1.png" />
+    <Resource Include="Resources\Images\CarolToken\C1.png" />
+    <Resource Include="Resources\Images\DianaToken\D1.png" />
+    <Resource Include="Resources\Images\EileenToken\E1.png" />
+  </ItemGroup>
+
+</Project>

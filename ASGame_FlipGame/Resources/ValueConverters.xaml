@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ValueConverter="clr-namespace:ASGame_FlipGame.ViewModel.ValueConverter">
+    <ValueConverter:NearMinesNumToColor x:Key="NearMinesNumToColor"/>
+    <ValueConverter:GameThemeToBrush x:Key="GameThemeToBrush"/>
+    <ValueConverter:GameThemeToBackground x:Key="GameThemeToBackground"/>
+    <ValueConverter:TokenSideToTheme x:Key="TokenSideToTheme"/>
+</ResourceDictionary>
