@@ -62,7 +62,7 @@
                 </Grid.RowDefinitions>
                 <View:RSlider Grid.Row="0" Grid.Column="1" ToolTip="行数" Minimum="{Binding GameSetter.MinRowSize}" Maximum="{Binding GameSetter.MaxRowSize}" Value="{Binding GameSetter.RowSize}" VerticalAlignment="Center" Theme="{Binding GameTheme,Converter={StaticResource GameThemeToBrush}}"/>
                 <View:RSlider Grid.Row="1" Grid.Column="1" ToolTip="列数" Minimum="{Binding GameSetter.MinColumnSize}" Maximum="{Binding GameSetter.MaxColumnSize}" Value="{Binding GameSetter.ColumnSize}" VerticalAlignment="Center" Theme="{Binding GameTheme,Converter={StaticResource GameThemeToBrush}}"/>
-                <View:RSlider Grid.Row="2" Grid.Column="1" ToolTip="寄数" Minimum="{Binding GameSetter.MinInitFliped}" Maximum="{Binding GameSetter.MaxInitFliped}" Value="{Binding GameSetter.InitFliped}" VerticalAlignment="Center" Theme="{Binding GameTheme,Converter={StaticResource GameThemeToBrush}}"/>
+                <View:RSlider Grid.Row="2" Grid.Column="1" ToolTip="初始翻面数" Minimum="{Binding GameSetter.MinInitFliped}" Maximum="{Binding GameSetter.MaxInitFliped}" Value="{Binding GameSetter.InitFliped}" VerticalAlignment="Center" Theme="{Binding GameTheme,Converter={StaticResource GameThemeToBrush}}"/>
             </Grid>
             <Button Grid.Row="2" Content="S T A R T" Height="40" Margin="0,10" Style="{StaticResource RButton}" Click="StartGame_Click"/>
         </Grid>
