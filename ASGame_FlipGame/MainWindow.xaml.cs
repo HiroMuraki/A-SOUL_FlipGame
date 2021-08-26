@@ -49,6 +49,9 @@ namespace ASGame_FlipGame {
                 Game.Start(GameSetter.RowSize, GameSetter.ColumnSize);
                 Game.Shuffle(GameSetter.InitFliped);
                 GameStatistics.Hide();
+                if (Topmost) {
+                    FoldSetterPanel();
+                }
             }
             catch (Exception exp) {
                 MessageTip.DisplayTip($"文件读取错误：{exp.Message}", TimeSpan.FromSeconds(2));
@@ -84,6 +87,9 @@ namespace ASGame_FlipGame {
             else {
                 ExpandSetterPanel();
             }
+        }
+        private void LockToTop_Click(object sender, RoutedEventArgs e) {
+            Topmost = !Topmost;
         }
 
         private void Token_Flip(object sender, RoutedEventArgs e) {

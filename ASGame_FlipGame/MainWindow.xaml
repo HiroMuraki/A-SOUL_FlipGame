@@ -38,6 +38,29 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="LockButton" TargetType="ToggleButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{StaticResource TextTheme}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                            Background="{TemplateBinding Background}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background" Value="CadetBlue" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid x:Name="GridRoot" Background="{Binding Theme,Converter={StaticResource GameThemeToBrush}}">
         <Grid.ColumnDefinitions>
@@ -52,7 +75,7 @@
             </Grid.RowDefinitions>
             <Button Grid.Row="0" Height="40" Content="=" VerticalAlignment="Top" Style="{StaticResource TitleButton}" Click="ExpandSetterPanel_Click"/>
             <View:GameSetterControlPanel Grid.Row="1" x:Name="SetterPanel" GameTheme="{Binding Path=Theme,ElementName=Self}" Opacity="0" StartGame="StartGame_Click"/>
-            <Label Grid.Row="2" Height="50" Content="{Binding Game.Process}" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource TextTheme}"/>
+            <ToggleButton Grid.Row="2" Height="50" Content="LOCK" Style="{StaticResource LockButton}" Click="LockToTop_Click"/>
         </Grid>
         <Grid Grid.Column="1">
             <Image Source="{Binding Theme,Converter={StaticResource GameThemeToBackground}}" Stretch="UniformToFill" HorizontalAlignment="Center" MouseLeftButtonDown="Window_Move"/>
