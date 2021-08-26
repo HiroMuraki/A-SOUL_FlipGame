@@ -56,6 +56,10 @@
                             <Trigger Property="IsChecked" Value="True">
                                 <Setter Property="Background" Value="CadetBlue" />
                             </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource TextTheme}" />
+                                <Setter Property="Foreground" Value="CadetBlue" />
+                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -75,7 +79,7 @@
             </Grid.RowDefinitions>
             <Button Grid.Row="0" Height="40" Content="=" VerticalAlignment="Top" Style="{StaticResource TitleButton}" Click="ExpandSetterPanel_Click"/>
             <View:GameSetterControlPanel Grid.Row="1" x:Name="SetterPanel" GameTheme="{Binding Path=Theme,ElementName=Self}" Opacity="0" StartGame="StartGame_Click"/>
-            <ToggleButton Grid.Row="2" Height="50" Content="LOCK" Style="{StaticResource LockButton}" Click="LockToTop_Click"/>
+            <ToggleButton Grid.Row="2" Height="50" Content="置顶" ToolTip="切换窗口置顶"  Style="{StaticResource LockButton}" Click="LockToTop_Click"/>
         </Grid>
         <Grid Grid.Column="1">
             <Image Source="{Binding Theme,Converter={StaticResource GameThemeToBackground}}" Stretch="UniformToFill" HorizontalAlignment="Center" MouseLeftButtonDown="Window_Move"/>
